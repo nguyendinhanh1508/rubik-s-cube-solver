@@ -1,0 +1,45 @@
+#ifndef CUBE_H
+#define CUBE_H
+
+/*
+the edges are in clockwise order
+it starts from the top layer of the cube, and the one closest to us will be 0, then it will go in a clockwise pattern
+  UB          02
+UL  UR      01  03
+  UF          00
+second layer:
+BL  BR      05  06
+
+FL  FR      04  07
+last layer:
+  DB          10
+DL  DR      09  11
+  DF          08
+the corners are also in clockwise order
+top layer:
+U1  U2      01  02
+U0  U3      00  03
+bottom layer:
+D1  D2      05  06
+D0  D3      04  07
+*/
+
+
+/* legend
+edge positions:
+UF = 0, UL = 1, UB = 2, UR = 3
+FL = 4, BL = 5, BR = 6, FR = 7
+DF = 8, DL = 9, DB = 10, DR = 11
+corner positions:
+U0 = 0, U1 = 1, U2 = 2, U3 = 3
+D0 = 4, D1 =  5, D2 = 6, D3 = 7
+*/
+enum Notation { U, D, R, L, F, B };
+
+struct Cube {
+    int edges[12];
+    int corners[8];
+    int edge_orient[12];
+    int corner_orient[8];
+};
+#endif
