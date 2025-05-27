@@ -34,7 +34,14 @@ corner positions:
 U0 = 0, U1 = 1, U2 = 2, U3 = 3
 D0 = 4, D1 =  5, D2 = 6, D3 = 7
 */
-enum Notation { U, D, R, L, F, B };
+enum Notation { 
+    U, U2, U_PRIME, 
+    D, D2, D_PRIME, 
+    R, R2, R_PRIME, 
+    L, L2, L_PRIME, 
+    F, F2, F_PRIME, 
+    B, B2, B_PRIME
+};
 
 struct Cube {
     int edges[12];
