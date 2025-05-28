@@ -24,7 +24,7 @@ void apply_move(Cube &cube, Notation move){
             rotate(cube.edge_orient[0], cube.edge_orient[1], cube.edge_orient[2], cube.edge_orient[3]);
             rotate(cube.corners[0], cube.corners[1], cube.corners[2], cube.corners[3]);
             rotate(cube.corner_orient[0], cube.corner_orient[1], cube.corner_orient[2], cube.corner_orient[3]);
-        break;
+            break;
         case U2:
             rotate(cube.edges[0], cube.edges[1], cube.edges[2], cube.edges[3]);
             rotate(cube.edge_orient[0], cube.edge_orient[1], cube.edge_orient[2], cube.edge_orient[3]);
@@ -34,19 +34,19 @@ void apply_move(Cube &cube, Notation move){
             rotate(cube.edge_orient[0], cube.edge_orient[1], cube.edge_orient[2], cube.edge_orient[3]);
             rotate(cube.corners[0], cube.corners[1], cube.corners[2], cube.corners[3]);
             rotate(cube.corner_orient[0], cube.corner_orient[1], cube.corner_orient[2], cube.corner_orient[3]);
-        break;
+            break;
         case U_PRIME:
             rotate(cube.edges[0], cube.edges[1], cube.edges[2], cube.edges[3], true);
             rotate(cube.edge_orient[0], cube.edge_orient[1], cube.edge_orient[2], cube.edge_orient[3], true);
             rotate(cube.corners[0], cube.corners[1], cube.corners[2], cube.corners[3], true);
             rotate(cube.corner_orient[0], cube.corner_orient[1], cube.corner_orient[2], cube.corner_orient[3], true);
-        break;
+            break;
         case D:
             rotate(cube.edges[8], cube.edges[9], cube.edges[10], cube.edges[11], true);
             rotate(cube.edge_orient[8], cube.edge_orient[9], cube.edge_orient[10], cube.edge_orient[11], true);
             rotate(cube.corners[4], cube.corners[5], cube.corners[6], cube.corners[7], true);
             rotate(cube.corner_orient[4], cube.corner_orient[5], cube.corner_orient[6], cube.corner_orient[7], true);
-        break;
+            break;
         case D2:
             rotate(cube.edges[8], cube.edges[9], cube.edges[10], cube.edges[11], true);
             rotate(cube.edge_orient[8], cube.edge_orient[9], cube.edge_orient[10], cube.edge_orient[11], true);
@@ -56,13 +56,13 @@ void apply_move(Cube &cube, Notation move){
             rotate(cube.edge_orient[8], cube.edge_orient[9], cube.edge_orient[10], cube.edge_orient[11], true);
             rotate(cube.corners[4], cube.corners[5], cube.corners[6], cube.corners[7], true);
             rotate(cube.corner_orient[4], cube.corner_orient[5], cube.corner_orient[6], cube.corner_orient[7], true);
-        break;
+            break;
         case D_PRIME:
             rotate(cube.edges[8], cube.edges[9], cube.edges[10], cube.edges[11]);
             rotate(cube.edge_orient[8], cube.edge_orient[9], cube.edge_orient[10], cube.edge_orient[11]);
             rotate(cube.corners[4], cube.corners[5], cube.corners[6], cube.corners[7]);
             rotate(cube.corner_orient[4], cube.corner_orient[5], cube.corner_orient[6], cube.corner_orient[7]);
-        break;
+            break;
         case L:
             rotate(cube.edges[1], cube.edges[4], cube.edges[9], cube.edges[5], true);
             rotate(cube.edge_orient[1], cube.edge_orient[4], cube.edge_orient[9], cube.edge_orient[5], true);
@@ -71,7 +71,7 @@ void apply_move(Cube &cube, Notation move){
             cube.corner_orient[0] = (cube.corner_orient[0] + 1) % 3;
             cube.corner_orient[4] = (cube.corner_orient[4] + 2) % 3;
             cube.corner_orient[5] = (cube.corner_orient[5] + 2) % 3;
-        break;
+            break;
         case L2:
             rotate(cube.edges[1], cube.edges[4], cube.edges[9], cube.edges[5], true);
             rotate(cube.edge_orient[1], cube.edge_orient[4], cube.edge_orient[9], cube.edge_orient[5], true);
@@ -87,7 +87,7 @@ void apply_move(Cube &cube, Notation move){
             cube.corner_orient[0] = (cube.corner_orient[0] + 1) % 3;
             cube.corner_orient[4] = (cube.corner_orient[4] + 2) % 3;
             cube.corner_orient[5] = (cube.corner_orient[5] + 2) % 3;
-        break;
+            break;
         case L_PRIME:
             rotate(cube.edges[1], cube.edges[4], cube.edges[9], cube.edges[5]);
             rotate(cube.edge_orient[1], cube.edge_orient[4], cube.edge_orient[9], cube.edge_orient[5]);
@@ -96,7 +96,7 @@ void apply_move(Cube &cube, Notation move){
             cube.corner_orient[0] = (cube.corner_orient[0] + 2) % 3;
             cube.corner_orient[4] = (cube.corner_orient[4] + 1) % 3;
             cube.corner_orient[5] = (cube.corner_orient[5] + 1) % 3;
-        break;
+            break;
         case R:
             rotate(cube.edges[3], cube.edges[7], cube.edges[11], cube.edges[6], true);
             rotate(cube.edge_orient[3], cube.edge_orient[7], cube.edge_orient[11], cube.edge_orient[6], true);
@@ -105,7 +105,7 @@ void apply_move(Cube &cube, Notation move){
             cube.corner_orient[3] = (cube.corner_orient[3] + 1) % 3;
             cube.corner_orient[6] = (cube.corner_orient[6] + 2) % 3;
             cube.corner_orient[7] = (cube.corner_orient[7] + 2) % 3;
-        break;
+            break;
         case R2:
             rotate(cube.edges[3], cube.edges[7], cube.edges[11], cube.edges[6], true);
             rotate(cube.edge_orient[3], cube.edge_orient[7], cube.edge_orient[11], cube.edge_orient[6], true);
@@ -121,7 +121,7 @@ void apply_move(Cube &cube, Notation move){
             cube.corner_orient[3] = (cube.corner_orient[3] + 1) % 3;
             cube.corner_orient[6] = (cube.corner_orient[6] + 2) % 3;
             cube.corner_orient[7] = (cube.corner_orient[7] + 2) % 3;
-        break;
+            break;
         case R_PRIME:
             rotate(cube.edges[3], cube.edges[7], cube.edges[11], cube.edges[6]);
             rotate(cube.edge_orient[3], cube.edge_orient[7], cube.edge_orient[11], cube.edge_orient[6]);
@@ -130,7 +130,7 @@ void apply_move(Cube &cube, Notation move){
             cube.corner_orient[3] = (cube.corner_orient[3] + 2) % 3;
             cube.corner_orient[6] = (cube.corner_orient[6] + 1) % 3;
             cube.corner_orient[7] = (cube.corner_orient[7] + 1) % 3;
-        break;
+            break;
         case F:
             rotate(cube.edges[0], cube.edges[4], cube.edges[8], cube.edges[7], true);
             cube.edge_orient[0] ^= 1;
@@ -142,7 +142,7 @@ void apply_move(Cube &cube, Notation move){
             cube.corner_orient[3] = (cube.corner_orient[3] + 2) % 3;
             cube.corner_orient[7] = (cube.corner_orient[7] + 1) % 3;
             cube.corner_orient[4] = (cube.corner_orient[4] + 2) % 3;
-        break;
+            break;
         case F2:
             rotate(cube.edges[0], cube.edges[4], cube.edges[8], cube.edges[7], true);
             cube.edge_orient[0] ^= 1;
@@ -164,7 +164,7 @@ void apply_move(Cube &cube, Notation move){
             cube.corner_orient[3] = (cube.corner_orient[3] + 2) % 3;
             cube.corner_orient[7] = (cube.corner_orient[7] + 1) % 3;
             cube.corner_orient[4] = (cube.corner_orient[4] + 2) % 3;
-        break;
+            break;
         case F_PRIME:
             rotate(cube.edges[0], cube.edges[4], cube.edges[8], cube.edges[7]);
             cube.edge_orient[0] ^= 1;
@@ -176,7 +176,7 @@ void apply_move(Cube &cube, Notation move){
             cube.corner_orient[3] = (cube.corner_orient[3] + 1) % 3;
             cube.corner_orient[7] = (cube.corner_orient[7] + 2) % 3;
             cube.corner_orient[4] = (cube.corner_orient[4] + 1) % 3;
-        break;
+            break;
         case B:
             rotate(cube.edges[2], cube.edges[5], cube.edges[10], cube.edges[6], true);
             cube.edge_orient[2] ^= 1;
@@ -188,7 +188,7 @@ void apply_move(Cube &cube, Notation move){
             cube.corner_orient[2] = (cube.corner_orient[2] + 1) % 3;
             cube.corner_orient[6] = (cube.corner_orient[6] + 1) % 3;
             cube.corner_orient[5] = (cube.corner_orient[5] + 2) % 3;
-        break;
+            break;
         case B2:
             rotate(cube.edges[2], cube.edges[5], cube.edges[10], cube.edges[6], true);
             cube.edge_orient[2] ^= 1;
@@ -210,7 +210,7 @@ void apply_move(Cube &cube, Notation move){
             cube.corner_orient[2] = (cube.corner_orient[2] + 1) % 3;
             cube.corner_orient[6] = (cube.corner_orient[6] + 1) % 3;
             cube.corner_orient[5] = (cube.corner_orient[5] + 2) % 3;
-        break;
+            break;
         case B_PRIME:
             rotate(cube.edges[2], cube.edges[5], cube.edges[10], cube.edges[6]);
             cube.edge_orient[2] ^= 1;
@@ -222,6 +222,6 @@ void apply_move(Cube &cube, Notation move){
             cube.corner_orient[2] = (cube.corner_orient[2] + 2) % 3;
             cube.corner_orient[6] = (cube.corner_orient[6] + 2) % 3;
             cube.corner_orient[5] = (cube.corner_orient[5] + 1) % 3;
-        break;
+            break;
     }
 }

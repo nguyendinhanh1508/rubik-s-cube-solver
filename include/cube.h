@@ -4,24 +4,24 @@
 /*
 the edges are in clockwise order
 it starts from the top layer of the cube, and the one closest to us will be 0, then it will go in a clockwise pattern
-  UB          02
-UL  UR      01  03
-  UF          00
+  UB           2
+UL  UR       1   3
+  UF           0
 second layer:
-BL  BR      05  06
+BL  BR       5   6
 
-FL  FR      04  07
+FL  FR       4   7
 last layer:
   DB          10
-DL  DR      09  11
-  DF          08
+DL  DR       9  11
+  DF           8
 the corners are also in clockwise order
 top layer:
-U1  U2      01  02
-U0  U3      00  03
+U1  U2       1   2
+U0  U3       0   3
 bottom layer:
-D1  D2      05  06
-D0  D3      04  07
+D1  D2       5   6
+D0  D3       4   7
 */
 
 
