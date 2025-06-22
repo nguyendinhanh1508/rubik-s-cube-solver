@@ -1,1 +1,1 @@
-g++ -o main.exe main.cpp imple/io.cpp imple/checking.cpp imple/moves.cpp imple/search.cpp imple/phases.cpp
+g++ -o release/main.exe main.cpp imple/io.cpp imple/checking.cpp imple/moves.cpp imple/search.cpp imple/phases.cpp
