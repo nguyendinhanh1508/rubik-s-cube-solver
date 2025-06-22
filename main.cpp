@@ -1,13 +1,15 @@
 #include <iostream>
-#include "include/cube.h"
-#include "helper/moves.cpp"
-#include "helper/checking.cpp"
-#include "search.cpp"
 #include <vector>
-#include "io.cpp"
+#include "include/checking.h"
+#include "include/cube.h"
+#include "include/io.h"
+#include "include/moves.h"
+#include "include/phases.h"
+#include "include/search.h"
 
 int main() {
     Cube scrambled = input();
+    std::cout << "Hang on I'm thinking of the solution!\n";
     std::vector<Notation> phase_one_moves, phase_two_moves;
     if (idastar_phase_one(scrambled, phase_one_moves)) {
         Cube G1 = scrambled;
@@ -19,6 +21,10 @@ int main() {
             solution.insert(solution.end(), phase_two_moves.begin(), phase_two_moves.end());
             std::cout << "Solution(" << solution.size() << " moves):\n";
             output(solution);
+        } else {
+            std::cout << "Failed phase two";
         }
+    } else {
+        std::cout << "Failed phase one";
     }
 }

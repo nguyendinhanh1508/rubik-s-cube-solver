@@ -1,5 +1,4 @@
-#include <iostream>
-#include "../include/cube.h"
+#include "../include/moves.h"
 
 void rotate(int& a, int& b, int& c, int& d, bool ccw = false){
     if (ccw) {

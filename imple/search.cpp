@@ -1,8 +1,4 @@
-#include <iostream>
-#include "include/phases.h"
-#include "helper/checking.cpp"
-#include "helper/moves.cpp"
-#include <vector>
+#include "../include/search.h"
 
 bool dfs_phase_one(Cube& cube, int depth, int threshold, std::vector<Notation>& path, Notation prev) {
     int estimate = depth + heuristic_phase_one(cube);

@@ -1,10 +1,4 @@
-#include <iostream>
-#include "include/cube.h"
-#include <vector>
-
-Cube input() {
-
-}
+#include "../include/io.h"
 
 void output(std::vector<Notation> solution) {
     std::string res = "";
@@ -69,4 +63,56 @@ void output(std::vector<Notation> solution) {
         res.insert(res.end(), cur.begin(), cur.end());
     }
     std::cout << res;
+}
+
+#include <chrono>
+#include <random>
+
+std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
+
+int rnd() {
+    return rng() % 18;
+}
+std::vector<Notation> scramble_gen(int length = 20) {
+    std::vector<Notation> all_moves = { 
+        U, U2, U_PRIME, 
+        D, D2, D_PRIME, 
+        R, R2, R_PRIME, 
+        L, L2, L_PRIME, 
+        F, F2, F_PRIME, 
+        B, B2, B_PRIME
+    };
+
+    std::vector<Notation> scramble;
+    scramble.reserve(length);
+    Notation last_move = static_cast<Notation>(-1);
+    for (int i = 0; i < length; i++) {
+        Notation move;
+        do {
+            move = all_moves[rnd()];
+        } while (move / 3 == last_move / 3);
+        scramble.push_back(move);
+        last_move = move;
+    }
+    return scramble;
+}
+
+Cube input() { //no input yet so just scramble and give solution
+    Cube cube;
+    for (int i = 0; i < 12; i++) {
+        cube.edges[i] = i;
+        cube.edge_orient[i] = 0;
+    }
+    for (int i = 0; i < 8; i++) {
+        cube.corners[i] = i;
+        cube.corner_orient[i] = 0;
+    }
+    auto scramble = scramble_gen();
+    for (auto it : scramble) {
+        apply_move(cube, it);
+    }
+    std::cout << "Generated scramble (" << scramble.size() << " moves):\n";
+    output(scramble);
+    std::cout << '\n';
+    return cube;
 }

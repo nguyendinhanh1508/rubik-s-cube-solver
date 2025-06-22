@@ -1,5 +1,4 @@
-#include <iostream>
-#include "../include/cube.h"
+#include "../include/checking.h"
 
 bool in_G1(const Cube& cube) {
     for (auto it : cube.edge_orient) {
